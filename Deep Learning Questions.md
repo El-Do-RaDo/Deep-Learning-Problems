@@ -107,11 +107,11 @@
 * 分配(Assignment)：将每个观测分配到聚类中，使得组内平方和（WCSS）达到最小
   因为这一平方和就是平方后的欧氏距离，所以很直观地把观测分配到离它最近得均值点即可:
 
- <img src="https://latex.codecogs.com/gif.latex?
-\large 
-\dpi{400}
-{S_i}^{(t)} = \{x_p:{||x_p - {m_i}^{(t)}||}^2 \leq {||x_p - {m_j}^{(t)}||}^2 \quad\forall j, 1\leq j \leq k \}"/>
+![][f1]
 
+[f1]:http://latex.codecogs.com/gif.latex?%7BS_i%7D%5E%7B%28t%29%7D%20%3D%20%5C%7Bx_p%3A%7B%7C%7Cx_p%20-%20%7Bm_i%7D%5E%7B%28t%29%7D%7C%7C%7D%5E2%20%5Cleq%20%7B%7C%7Cx_p%20-%20%7Bm_j%7D%5E%7B%28t%29%7D%7C%7C%7D%5E2%20%5Cquad%5Cforall%20j%2C%201%5Cleq%20j%20%5Cleq%20k%5C%7D
+
+[//]: # (   {S_i}^{(t)} = \{x_p:{||x_p - {m_i}^{(t)}||}^2 \leq {||x_p - {m_j}^{(t)}||}^2 \quad\forall j, 1\leq j \leq k\} )
   其中每个$x_p$都只被分配到一个确定的聚类$S^t$中，尽管在理论上它可能被分配到2个或者更多的聚类
 * 更新(Update)：计算得到上步得到聚类中每一聚类观测值的图心，作为新的均值点:
   $${m_i}^{(t + 1)} = {1 \over |{S_i}^{(t)}|}{\sum}_{x_j\in{S_i}^{(t)}}x_j$$
